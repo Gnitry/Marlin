@@ -801,7 +801,8 @@
 #define STEPS_KOEF_DRV8825 32
 #define STEPS_KOEF_A4988 16
 #define STEPS_KOEF_TMC 16
-#define DEFAULT_AXIS_STEPS_PER_UNIT { 6.25*STEPS_KOEF_TMC, 6.25*STEPS_KOEF_TMC, 200*STEPS_KOEF_TMC/1.25, 25.545*STEPS_KOEF_TMC }
+// #define DEFAULT_AXIS_STEPS_PER_UNIT { 6.25*STEPS_KOEF_TMC, 6.25*STEPS_KOEF_TMC, 200*STEPS_KOEF_TMC/1.25, 25.545*STEPS_KOEF_TMC }  // строительная шпилька
+#define DEFAULT_AXIS_STEPS_PER_UNIT { 6.25*STEPS_KOEF_TMC, 6.25*STEPS_KOEF_TMC, 200*STEPS_KOEF_TMC/8, 25.545*STEPS_KOEF_TMC } // THSL-400-8D
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
 
 /**
@@ -809,7 +810,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 150, 150, 5, 40 }
+#define DEFAULT_MAX_FEEDRATE          { 150, 150, 20, 40 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1120,7 +1121,7 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   8 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  4 // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     4 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
