@@ -1057,7 +1057,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 20
+#define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1230,15 +1230,18 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 280
-#define Y_BED_SIZE 300
+#define X_BED_SIZE 270
+#define Y_BED_SIZE 305
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
+
 #define X_MIN_POS 0
-#define Y_MIN_POS 15
+#define X_MAX_POS X_BED_SIZE
+
+#define Y_MIN_POS -15
+#define Y_MAX_POS Y_BED_SIZE
+
 #define Z_MIN_POS 0
-#define X_MAX_POS 280
-#define Y_MAX_POS 315
 #define Z_MAX_POS 305
 
 /**
@@ -1581,8 +1584,8 @@
 #if ENABLED(Z_SAFE_HOMING)
   // #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
   // #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
-  #define Z_SAFE_HOMING_X_POINT 30  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT 45  // Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 0  // X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 0  // Y point for Z homing
 #endif
 
 // Homing speeds (mm/min)
