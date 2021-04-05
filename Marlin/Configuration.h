@@ -1057,7 +1057,7 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 10
+#define PROBING_MARGIN 20
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1584,8 +1584,8 @@
 #if ENABLED(Z_SAFE_HOMING)
   // #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
   // #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
-  #define Z_SAFE_HOMING_X_POINT 0  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT 0  // Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 30  // X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 30  // Y point for Z homing
 #endif
 
 // Homing speeds (mm/min)
