@@ -1230,8 +1230,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 270
-#define Y_BED_SIZE 305
+#define X_BED_SIZE 260
+#define Y_BED_SIZE 300
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 
