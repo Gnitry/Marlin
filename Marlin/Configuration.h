@@ -1063,10 +1063,10 @@
 #define XY_PROBE_FEEDRATE (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (9*60)
+#define Z_PROBE_FEEDRATE_FAST (6*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 8)
+#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 6)
 
 /**
  * Probe Activation Switch
@@ -1230,15 +1230,15 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 260
-#define Y_BED_SIZE 300
+#define X_BED_SIZE 240
+#define Y_BED_SIZE 270
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 
 #define X_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 
-#define Y_MIN_POS -15
+#define Y_MIN_POS -5
 #define Y_MAX_POS Y_BED_SIZE
 
 #define Z_MIN_POS 0
